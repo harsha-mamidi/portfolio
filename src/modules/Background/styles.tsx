@@ -1,26 +1,28 @@
 import styled, { css, keyframes } from "styled-components";
 
+const { random } = Math;
+
 const animate = (i: number) => keyframes`
- 
+
   25% {
-    transform: rotate(${Math.random() * 40}deg) scale(${
-  0.3 + i * 0.1
-}) translateY(${Math.random() * 20}vh) translateX(${Math.random() * 20}vw);
-    opacity: ${Math.random()};
+    transform: rotate(${random() * 40}deg) scale(${0.3 + i * 0.1}) 
+    translateY(${random() * 50}vh) translateX(${random() * 50}vw);
+    opacity: ${random()};
   }
 
+
   50% {
-    transform: rotate(${Math.random() * -3}rad) scale(${
-  0.3 + i * 0.1
-}) translateY(${Math.random() * 20}vh) translateX(${Math.random() * 20}vw);
-    opacity: ${Math.random()};
+    transform: rotate(${random() * -3}rad) scale(${0.3 + i * 0.1}) 
+    translateY(${random() * 20}vh) translateX(${random() * 20}vw);
+
+    opacity: 1;
   }
 
   75% {
-    transform: rotate(${Math.random() * 2}rad) scale(${
-  0.2 + i * 0.1
-}) translateY(${Math.random() * 30}vh) translateX(${Math.random() * 30}vw);
-    opacity: ${Math.random()};
+    transform: rotate(${random() * 2}rad) scale(${0.2 + i * 0.1}) 
+    translateY(${random() * 30}vh) translateX(${random() * 30}vw);
+
+    opacity: ${random()};
   }
 
 `;
@@ -38,20 +40,21 @@ export const StyledBackground = styled.div<{ items: number }>`
       (_, i) => css`
         .bg-element:nth-child(n + ${i + 1}) {
           position: absolute;
-          background: white;
+          background: #00fff7;
           opacity: 0.75;
+          border-radius: 50%;
 
-          height: ${Math.random() * 40}vw;
-          max-height: ${Math.random() * 40}vh;
+          height: ${random() * 40}vw;
+          max-height: ${random() * 40}vh;
           aspect-ratio: 1;
           border-radius: 50%;
 
-          left: ${Math.random() * 100}vw;
-          top: ${Math.random() * 100}vh;
+          left: ${random() * 100}vw;
+          top: ${random() * 100}vh;
 
           animation-name: ${animate(i + 1)};
           animation-duration: ${i + 1 * 20}s;
-          animation-delay: ${Math.random() * i * 1.5}s;
+          animation-delay: ${random() * i * 1.5}s;
           animation-iteration-count: infinite;
         }
       `

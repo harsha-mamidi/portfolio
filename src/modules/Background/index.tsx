@@ -1,6 +1,6 @@
 import { StyledBackground } from "./styles";
 
-const items = 20;
+const items = 30;
 
 export default function Background() {
   return (
