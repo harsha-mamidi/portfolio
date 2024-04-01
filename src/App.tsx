@@ -1,6 +1,5 @@
 import Background from "./modules/Background";
 import "./global.css";
-import Home from "./modules/Home";
 
 function App() {
   return (
@@ -12,7 +11,6 @@ function App() {
           <span style={{ color: "#00eeff" }}> Coming Soon</span>
         </h1>
       </div>
-{/*       <Home /> */}
     </>
   );
 }
