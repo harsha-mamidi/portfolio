@@ -12,7 +12,7 @@ function App() {
           <span style={{ color: "#00eeff" }}> Coming Soon</span>
         </h1>
       </div>
-      <Home />
+{/*       <Home /> */}
     </>
   );
 }
