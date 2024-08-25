@@ -4,14 +4,12 @@ import styled from "styled-components";
 export const StyledHome = styled.div`
   width: 90%;
   margin-inline: auto;
-  height: 80%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   gap: 4vh;
   align-items: center;
   padding: 2vh;
-  overflow: auto;
 `;
 
 const StyledWidget = styled.div`
